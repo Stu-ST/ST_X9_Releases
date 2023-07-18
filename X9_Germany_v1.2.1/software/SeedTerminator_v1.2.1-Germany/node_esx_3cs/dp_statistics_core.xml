@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-dp-core-definition>
+    <file-version>1</file-version>
+    <data-pool related-application-index="0" is-safety="false" scope-is-private="true">
+        <type>diag</type>
+        <name>Statistics</name>
+        <version major="0" minor="0" release="0"/>
+        <comment>Datapool for static values that are calculated in the ECU and can be used to monitor the performance with openSYDE</comment>
+        <lists length="1">
+            <list>
+                <name>Runtime</name>
+                <comment/>
+                <data-elements length="4">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>OsyTask_Init</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Runtime of openSYDE task on first call</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>µs</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>OsyTask_Min</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Minimum runtime of openSYDE task</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>µs</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>OsyTask_Actual</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Currently measured openSYDE task runtime</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>µs</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>OsyTask_Max</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Maximum runtime of openSYDE task</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>µs</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+        </lists>
+        <export-settings/>
+    </data-pool>
+</opensyde-dp-core-definition>

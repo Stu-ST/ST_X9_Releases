@@ -1,0 +1,2348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-node-io-config>
+    <file-version>1</file-version>
+    <ref-content-version>3</ref-content-version>
+    <io-base-file>esx_3cs.syde_halc_def</io-base-file>
+    <general is-safe-datablock-set="false" safe-datablock-index="0" is-unsafe-datablock-set="false" unsafe-datablock-index="0"/>
+    <domains length="3">
+        <domain>
+            <config safety-relevant="false" use-case-index="0">
+                <name>Inputs</name>
+                <comment/>
+                <parameter-structs length="0"/>
+            </config>
+            <channels length="16">
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_1</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_2</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_3</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_4</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_5</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_6</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_7</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_8</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_9</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_10</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_11</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_12</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_13</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_14</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_15</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Input_16</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Debounce time for digital inputs in microseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="ActiveHigh" value="0"/>
+                                        <enum-item display="ActiveLow" value="1"/>
+                                    </value>
+                                    <comment>Input polarity for digital signals.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x2">
+                                            <comment>Enables the Pull-Up Resistor</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x4">
+                                            <comment>Enables the Pull-Down Resistor</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Input pull resistors.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="enum" base-type="uint8" is-array="false" array-size="1" value="0">
+                                        <enum-item display="False" value="0"/>
+                                        <enum-item display="True" value="128"/>
+                                    </value>
+                                    <comment>Is the input signal NAMUR compliant?</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="6">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Number of samples for average calculation.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="bitmask" base-type="uint16" is-array="false" array-size="1" value="0">
+                                        <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x1">
+                                            <comment>This mode does not include the minimum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                        <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x2">
+                                            <comment>This mode does not include the maximum value from the average buffer.</comment>
+                                        </bitmask-selection>
+                                    </value>
+                                    <comment>Defines the mode of average frequency measurement.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Virtual period threshold in per mil</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="2500"/>
+                                    <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="20000000"/>
+                                    <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+            </channels>
+        </domain>
+        <domain>
+            <config safety-relevant="false" use-case-index="0">
+                <name>SuperVisor</name>
+                <comment/>
+                <parameter-structs length="4">
+                    <parameter-struct>
+                        <parameters length="2">
+                            <parameter>
+                                <value type="uint16" is-array="false" array-size="1" value="0"/>
+                                <comment>in 0.5 ms</comment>
+                            </parameter>
+                            <parameter>
+                                <value type="uint16" is-array="false" array-size="1" value="200"/>
+                                <comment>in 0.5 ms</comment>
+                            </parameter>
+                        </parameters>
+                    </parameter-struct>
+                    <parameter-struct>
+                        <parameters length="2">
+                            <parameter>
+                                <value type="uint8" is-array="false" array-size="1" value="128"/>
+                                <comment>in 0.25 V</comment>
+                            </parameter>
+                            <parameter>
+                                <value type="uint8" is-array="false" array-size="1" value="32"/>
+                                <comment>in 0.25 V</comment>
+                            </parameter>
+                        </parameters>
+                    </parameter-struct>
+                    <parameter-struct>
+                        <single-value>
+                            <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                <bitmask-selection display="UeMax" initial-apply-value-setting="false" value="0x1">
+                                    <comment>switch off main switch if Ue is too high</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="UeMin" initial-apply-value-setting="false" value="0x2">
+                                    <comment>switch off main switch if Ue is too low</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="USysMax" initial-apply-value-setting="false" value="0x4">
+                                    <comment>switch off main switch if system voltage is too high</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="USysMin" initial-apply-value-setting="false" value="0x8">
+                                    <comment>switch off main switch if system voltage is too high</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="WdUser" initial-apply-value-setting="false" value="0x10">
+                                    <comment>switch off main switch if there is a user watchdog error</comment>
+                                </bitmask-selection>
+                            </value>
+                            <comment>selects on which conditions to turn off the main switch</comment>
+                        </single-value>
+                    </parameter-struct>
+                    <parameter-struct>
+                        <single-value>
+                            <value type="bitmask" base-type="uint8" is-array="false" array-size="1" value="0">
+                                <bitmask-selection display="UeMax" initial-apply-value-setting="false" value="0x1">
+                                    <comment>reset if Ue is too high</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="UeMin" initial-apply-value-setting="false" value="0x2">
+                                    <comment>reset if Ue is too low</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="USysMax" initial-apply-value-setting="false" value="0x4">
+                                    <comment>reset if system voltage is too high</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="USysMin" initial-apply-value-setting="false" value="0x8">
+                                    <comment>reset if system voltage is too high</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="WdUser" initial-apply-value-setting="false" value="0x10">
+                                    <comment>reset if there is a user watchdog error</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="WdSystem" initial-apply-value-setting="false" value="0x20">
+                                    <comment>reset if there is a system watchdog error</comment>
+                                </bitmask-selection>
+                                <bitmask-selection display="Config" initial-apply-value-setting="false" value="0x80">
+                                    <comment>reset if there is a SSV configuration error</comment>
+                                </bitmask-selection>
+                            </value>
+                            <comment>selects on which conditions to reset the ECU</comment>
+                        </single-value>
+                    </parameter-struct>
+                </parameter-structs>
+            </config>
+            <channels length="0"/>
+        </domain>
+        <domain>
+            <config safety-relevant="false" use-case-index="0">
+                <name>Outputs</name>
+                <comment/>
+                <parameter-structs length="0"/>
+            </config>
+            <channels length="15">
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Left_Actuator_Power_1</name>
+                    <comment>1 of 4 ouput pins used to power the left actuator. The 4-pin group consists of OP2A1, OP2A2, OP2A3 and OP2A4.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Left_Actuator_Power_2</name>
+                    <comment>1 of 4 ouput pins used to power the left actuator. The 4-pin group consists of OP2A1, OP2A2, OP2A3 and OP2A4.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Left_Actuator_Power_3</name>
+                    <comment>1 of 4 ouput pins used to power the left actuator. The 4-pin group consists of OP2A1, OP2A2, OP2A3 and OP2A4.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Left_Actuator_Power_4</name>
+                    <comment>1 of 4 ouput pins used to power the left actuator. The 4-pin group consists of OP2A1, OP2A2, OP2A3 and OP2A4.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Right_Actuator_Power_1</name>
+                    <comment>1 of 4 ouput pins used to power the right actuator. The 4-pin group consists of OP2A5, OP2A6, OP2A7 and OP2A8.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Right_Actuator_Power_2</name>
+                    <comment>1 of 4 ouput pins used to power the right actuator. The 4-pin group consists of OP2A5, OP2A6, OP2A7 and OP2A8.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Right_Actuator_Power_3</name>
+                    <comment>1 of 4 ouput pins used to power the right actuator. The 4-pin group consists of OP2A5, OP2A6, OP2A7 and OP2A8.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="1">
+                    <name>Right_Actuator_Power_4</name>
+                    <comment>1 of 4 ouput pins used to power the right actuator. The 4-pin group consists of OP2A5, OP2A6, OP2A7 and OP2A8.</comment>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Output_9</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Output_10</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Output_11</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Output_12</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Output_13</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Output_14</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+                <channel safety-relevant="false" use-case-index="0">
+                    <name>Output_15</name>
+                    <comment/>
+                    <parameter-structs length="2">
+                        <parameter-struct>
+                            <parameters length="5">
+                                <parameter>
+                                    <value type="uint32" is-array="false" array-size="1" value="100000"/>
+                                    <comment>Frequency in mHz</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the 100% PWM duty cycle</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="2500000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="4000000"/>
+                                    <comment>Defines the maximum current limit in microampere</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Defines the maximum voltage limit in millivolts</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                        <parameter-struct>
+                            <parameters length="8">
+                                <parameter>
+                                    <value type="uint16" is-array="false" array-size="1" value="10"/>
+                                    <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint32" is-array="false" array-size="1" value="0"/>
+                                    <comment>Proportional gain in 0.001 KP</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Integral time Ti in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Derivation time Td in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="1"/>
+                                    <comment>Current control sample time T in ms</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="0"/>
+                                    <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                                </parameter>
+                                <parameter>
+                                    <value type="sint16" is-array="false" array-size="1" value="10000"/>
+                                    <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                                </parameter>
+                            </parameters>
+                        </parameter-struct>
+                    </parameter-structs>
+                </channel>
+            </channels>
+        </domain>
+    </domains>
+</opensyde-node-io-config>

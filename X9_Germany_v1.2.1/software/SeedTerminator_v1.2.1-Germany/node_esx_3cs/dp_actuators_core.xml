@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-dp-core-definition>
+    <file-version>1</file-version>
+    <data-pool related-application-index="0" is-safety="false" scope-is-private="true">
+        <type>diag</type>
+        <name>Actuators</name>
+        <version major="0" minor="0" release="0"/>
+        <comment>Datapool for the left actuator service data.</comment>
+        <lists length="8">
+            <list>
+                <name>Control</name>
+                <comment/>
+                <data-elements length="2">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>get_SDO</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Flag for polling SDO data from actuator</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>set_PDO</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Flag to control actuator running out
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>Debugging</name>
+                <comment>Variables for debugging actuator operation</comment>
+                <data-elements length="20">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>ecu_col2_init_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_init function</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>ecu_col2_task_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_task function
+</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>ecu_hb_producer_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_heartbeat_register_init function for the left actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>ecu_nmt_send_start_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_nmt_send function with the start command for both actuators</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_actuator_node_status</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Status of left actuator node</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_actuator_NMT_status</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Status of left actuator node supervision	</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_actuator_hb_cons_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_heartbeat_register_consumer function for the left actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_actuator_status_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_nmt_get_slave_status function for the left actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_act_sdo_write_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from SDO write to left actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_act_sdo_read_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from SDO read from left actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_act_pdo_write_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from PDO write to
+ left actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>left_act_pdo_read_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from PDO read from left actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_actuator_node_status</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Status of right actuator node</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_actuator_NMT_status</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Status of right actuator node supervision	</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_actuator_hb_cons_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_heartbeat_register_consumer function for the right actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_actuator_status_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from the col2_nmt_get_slave_status function for the right
+ actuator
+</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_act_sdo_write_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from SDO write to right actuator
+</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_act_sdo_read_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from SDO read from right actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_act_pdo_write_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from PDO write to right actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>right_act_pdo_read_func_err</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>Error returned from PDO read from right actuator</comment>
+                        <min-value value="-32768"/>
+                        <max-value value="32767"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>left_actuator_RPDO</name>
+                <comment/>
+                <data-elements length="5">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Actuator run command</comment>
+                        <min-value value="0"/>
+                        <max-value value="64261"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>current</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator current limit</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>speed</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator speed percentage of max speed</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_start</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Soft start time value</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_stop</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Soft stop time value</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>left_actuator_TPDO</name>
+                <comment/>
+                <data-elements length="13">
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Actuator position</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>current</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator current</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_EOS_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator fully retracted flag
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_EOS_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator fully extended flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_over_current</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator over current flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_running_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator running out flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_running_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator running in flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_heartbeat_needed</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator needs ECU heartbeat flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>error_code</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator error code</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>speed</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Actuator speed</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm/s</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="25" offset="0" diag-event-call="false">
+                        <name>input_1_state</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator input 1 state</comment>
+                        <min-value value="0"/>
+                        <max-value value="3"/>
+                        <unit>%</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="25" offset="0" diag-event-call="false">
+                        <name>input_2_state</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator input 2 state</comment>
+                        <min-value value="0"/>
+                        <max-value value="3"/>
+                        <unit>%</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="25" offset="0" diag-event-call="false">
+                        <name>input_3_state</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator intput 3 state</comment>
+                        <min-value value="0"/>
+                        <max-value value="3"/>
+                        <unit>%</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>left_actuator_TSDO</name>
+                <comment/>
+                <data-elements length="54">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>highest_subindex_supported</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>current_limit_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>current_limit_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_start_time_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_start_time_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_stop_time_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_stop_time_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.5" offset="0" diag-event-call="false">
+                        <name>maximum_speed</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="200"/>
+                        <unit>%</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>virtual_EOS_out_position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>virtual_EOS_in_position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>UIN</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SW_variant</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SW_version_major</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SW_version_minor</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>config_production_order_number</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>production_date</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>yyyymmdd</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>maximum_current_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="-40" diag-event-call="false">
+                        <name>maximum_FET_temp_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>°C</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="-40" diag-event-call="false">
+                        <name>maximum_ambient_temp_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>°C</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="-40" diag-event-call="false">
+                        <name>minimum_ambient_temp_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>°C</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>current_usage</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>As</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>runtime</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>s</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_overvoltage</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_FET_over_temp</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_ambient_over_temp</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_low_voltage</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_hall_errors</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_EOS_switch_errors</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_linak_current_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_linak_current_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_custom_current_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_custom_current_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>communication_errors</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_EOS_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_EOS_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_starts_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_starts_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="5" offset="0" diag-event-call="false">
+                        <name>total_piston_distance</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>m</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_0</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_0</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_0</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_1</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_1</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_1</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_2</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_2</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_2</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_3</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_3</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_3</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_4</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_4</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_4</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>total_corrected_distance</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>right_actuator_RPDO</name>
+                <comment/>
+                <data-elements length="5">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Actuator run command</comment>
+                        <min-value value="0"/>
+                        <max-value value="64261"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>current</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator current limit</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>speed</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator speed percentage of max speed</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_start</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Soft start time value</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_stop</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Soft stop time value</comment>
+                        <min-value value="0"/>
+                        <max-value value="251"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>right_actuator_TPDO</name>
+                <comment/>
+                <data-elements length="13">
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Actuator position</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>current</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator current</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_EOS_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator fully retracted flag
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_EOS_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator fully extended flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_over_current</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator over current flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_running_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator running out flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_running_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator running in flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>flag_heartbeat_needed</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator needs ECU heartbeat flag</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>error_code</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator error code</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>speed</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Actuator speed</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm/s</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="25" offset="0" diag-event-call="false">
+                        <name>input_1_state</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator input 1 state</comment>
+                        <min-value value="0"/>
+                        <max-value value="3"/>
+                        <unit>%</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="25" offset="0" diag-event-call="false">
+                        <name>input_2_state</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator input 2 state</comment>
+                        <min-value value="0"/>
+                        <max-value value="3"/>
+                        <unit>%</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="25" offset="0" diag-event-call="false">
+                        <name>input_3_state</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Actuator intput 3 state</comment>
+                        <min-value value="0"/>
+                        <max-value value="3"/>
+                        <unit>%</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>right_actuator_TSDO</name>
+                <comment/>
+                <data-elements length="54">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>highest_subindex_supported</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>current_limit_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>current_limit_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_start_time_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_start_time_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_stop_time_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>soft_stop_time_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>ms</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.5" offset="0" diag-event-call="false">
+                        <name>maximum_speed</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="200"/>
+                        <unit>%</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>virtual_EOS_out_position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.10000000000000001" offset="0" diag-event-call="false">
+                        <name>virtual_EOS_in_position</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>UIN</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SW_variant</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SW_version_major</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SW_version_minor</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>config_production_order_number</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>production_date</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>yyyymmdd</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.25" offset="0" diag-event-call="false">
+                        <name>maximum_current_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>A</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="-40" diag-event-call="false">
+                        <name>maximum_FET_temp_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>°C</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="-40" diag-event-call="false">
+                        <name>maximum_ambient_temp_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>°C</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="-40" diag-event-call="false">
+                        <name>minimum_ambient_temp_seen</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>°C</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>current_usage</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>As</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>runtime</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>s</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_overvoltage</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_FET_over_temp</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_ambient_over_temp</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_low_voltage</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_hall_errors</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_EOS_switch_errors</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_linak_current_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_linak_current_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_custom_current_out</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_stops_custom_current_in</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>communication_errors</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_EOS_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_EOS_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_starts_out</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>num_starts_in</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="5" offset="0" diag-event-call="false">
+                        <name>total_piston_distance</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>m</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_0</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_0</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_0</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_1</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_1</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_1</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_2</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_2</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_2</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_3</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_3</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_3</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_reason_4</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_count_4</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>last_stop_powered_time_4</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>total_corrected_distance</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment/>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+        </lists>
+        <export-settings/>
+    </data-pool>
+</opensyde-dp-core-definition>

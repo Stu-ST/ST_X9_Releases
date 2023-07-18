@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-updatepack-definition>
+    <file-version>1</file-version>
+    <nodes>
+        <node active="1" position="0">
+            <files>
+                <file name="ESX_3CS/1_st2_control.hex"/>
+            </files>
+        </node>
+        <node active="0"/>
+        <node active="0"/>
+    </nodes>
+    <bus-index-client>1</bus-index-client>
+</opensyde-updatepack-definition>

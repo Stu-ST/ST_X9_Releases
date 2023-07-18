@@ -1,0 +1,2067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-dp-core-definition>
+    <file-version>1</file-version>
+    <data-pool related-application-index="0" is-safety="false" scope-is-private="true">
+        <type>halc</type>
+        <name>HAL_NON_SAFE</name>
+        <version major="0" minor="0" release="3"/>
+        <comment>Automatically generated Datapool for HAL non safe variable storage.</comment>
+        <lists length="4">
+            <list>
+                <name>Configuration</name>
+                <comment/>
+                <data-elements length="32">
+                    <data-element factor="1" offset="0">
+                        <name>InputUseCase</name>
+                        <type base-type="uint8" is-array="true" array-size="16"/>
+                        <comment>Selected use-case</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputFilter</name>
+                        <type base-type="uint16" is-array="true" array-size="16"/>
+                        <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputDebounce</name>
+                        <type base-type="uint16" is-array="true" array-size="16"/>
+                        <comment>Debounce time for digital inputs in microseconds</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputPolarity</name>
+                        <type base-type="uint8" is-array="true" array-size="16"/>
+                        <comment>Input polarity for digital signals.</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputPull</name>
+                        <type base-type="uint8" is-array="true" array-size="16"/>
+                        <comment>Input pull resistors.</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputisNamur</name>
+                        <type base-type="uint8" is-array="true" array-size="16"/>
+                        <comment>Is the input signal NAMUR compliant?</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                            <element value="128"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputSamples</name>
+                        <type base-type="uint16" is-array="true" array-size="16"/>
+                        <comment>Number of samples for average calculation.</comment>
+                        <min-value>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                        </min-value>
+                        <max-value>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                            <element value="56"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputMode</name>
+                        <type base-type="uint16" is-array="true" array-size="16"/>
+                        <comment>Defines the mode of average frequency measurement.</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputFilterConfig</name>
+                        <type base-type="uint16" is-array="true" array-size="16"/>
+                        <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputVirtualPeriodThreshold</name>
+                        <type base-type="uint16" is-array="true" array-size="16"/>
+                        <comment>Virtual period threshold in per mil</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputMinFrequency</name>
+                        <type base-type="uint32" is-array="true" array-size="16"/>
+                        <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+                        <min-value>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                        </min-value>
+                        <max-value>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                                <element value="2500"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputMaxFrequency</name>
+                        <type base-type="uint32" is-array="true" array-size="16"/>
+                        <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+                        <min-value>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                            <element value="2500"/>
+                        </min-value>
+                        <max-value>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                            <element value="20000000"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                                <element value="20000000"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorTimeMin</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>in 0.5 ms</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value value="0"/>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorTimeMax</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>in 0.5 ms</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value value="200"/>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorUeMax</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>in 0.25 V</comment>
+                        <min-value value="32"/>
+                        <max-value value="128"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value value="128"/>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorUeMin</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>in 0.25 V</comment>
+                        <min-value value="32"/>
+                        <max-value value="128"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value value="32"/>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorRelayOff</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>selects on which conditions to turn off the main switch</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value value="0"/>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorReset</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>selects on which conditions to reset the ECU</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value value="0"/>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputUseCase</name>
+                        <type base-type="uint8" is-array="true" array-size="15"/>
+                        <comment>Selected use-case</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                            <element value="255"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputFrequency</name>
+                        <type base-type="uint32" is-array="true" array-size="15"/>
+                        <comment>Frequency in mHz</comment>
+                        <min-value>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                            <element value="20000"/>
+                        </min-value>
+                        <max-value>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                            <element value="1000000"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                                <element value="100000"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputMaxPWMDC</name>
+                        <type base-type="sint32" is-array="true" array-size="15"/>
+                        <comment>Defines the 100% PWM duty cycle</comment>
+                        <min-value>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                        </min-value>
+                        <max-value>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputMaxCurrentHs</name>
+                        <type base-type="sint32" is-array="true" array-size="15"/>
+                        <comment>Defines the maximum current limit in microampere</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                            <element value="2500000"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                                <element value="2500000"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputMaxCurrentLs</name>
+                        <type base-type="sint32" is-array="true" array-size="15"/>
+                        <comment>Defines the maximum current limit in microampere</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                            <element value="4000000"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                                <element value="4000000"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputMaxVoltage</name>
+                        <type base-type="sint32" is-array="true" array-size="15"/>
+                        <comment>Defines the maximum voltage limit in millivolts</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputFilter</name>
+                        <type base-type="uint16" is-array="true" array-size="15"/>
+                        <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                            <element value="65535"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                                <element value="10"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputSetpoint</name>
+                        <type base-type="sint32" is-array="true" array-size="15"/>
+                        <comment>Desired setpoint in microampere for current controlled outputs</comment>
+                        <min-value>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                        </min-value>
+                        <max-value>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputP_Value</name>
+                        <type base-type="sint32" is-array="true" array-size="15"/>
+                        <comment>Proportional gain in 0.001 KP</comment>
+                        <min-value>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                        </min-value>
+                        <max-value>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputI_Value</name>
+                        <type base-type="sint16" is-array="true" array-size="15"/>
+                        <comment>Integral time Ti in ms</comment>
+                        <min-value>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                        </min-value>
+                        <max-value>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputD_Value</name>
+                        <type base-type="sint16" is-array="true" array-size="15"/>
+                        <comment>Derivation time Td in ms</comment>
+                        <min-value>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                            <element value="-32768"/>
+                        </min-value>
+                        <max-value>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputSampleTime</name>
+                        <type base-type="sint16" is-array="true" array-size="15"/>
+                        <comment>Current control sample time T in ms</comment>
+                        <min-value>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                        </min-value>
+                        <max-value>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                            <element value="32767"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                                <element value="1"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputOutputLimitMin</name>
+                        <type base-type="sint16" is-array="true" array-size="15"/>
+                        <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                            <element value="9999"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                                <element value="0"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputOutputLimitMax</name>
+                        <type base-type="sint16" is-array="true" array-size="15"/>
+                        <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+                        <min-value>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                        </min-value>
+                        <max-value>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                            <element value="10000"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values>
+                            <data-set-value>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                                <element value="10000"/>
+                            </data-set-value>
+                        </data-set-values>
+                    </data-element>
+                </data-elements>
+                <data-sets>
+                    <data-set>
+                        <name>Configuration_Values</name>
+                        <comment/>
+                    </data-set>
+                </data-sets>
+            </list>
+            <list>
+                <name>Inputs</name>
+                <comment/>
+                <data-elements length="2">
+                    <data-element factor="1" offset="0">
+                        <name>Inputs32_Value</name>
+                        <type base-type="sint32" is-array="true" array-size="16"/>
+                        <comment>Digital state of the input channel
+Voltage value in mV
+Current in uA
+Incremental counter value
+Frequency in mHz
+               </comment>
+                        <min-value>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                            <element value="-2147483648"/>
+                        </min-value>
+                        <max-value>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>Inputu32_AdditionalValue</name>
+                        <type base-type="uint32" is-array="true" array-size="16"/>
+                        <comment>Incremental counter direction
+Receives the last duty cycle measurement in 0.01% (0.1‰).
+               </comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                            <element value="4294967295"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>Outputs</name>
+                <comment/>
+                <data-elements length="4">
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorVersion</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>the version information of the supervisor</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorSysError</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Contains current SSV error flags</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorLastReset</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Contains information about the last ECU reset.</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputValue</name>
+                        <type base-type="sint32" is-array="true" array-size="15"/>
+                        <comment>Digital state of the output
+PWM Duty Cycle
+Current Control setpoint in uA
+Voltage in mV
+               </comment>
+                        <min-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </min-value>
+                        <max-value>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                            <element value="2147483647"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>Statuses</name>
+                <comment/>
+                <data-elements length="5">
+                    <data-element factor="1" offset="0">
+                        <name>InputInitStatus</name>
+                        <type base-type="sint16" is-array="true" array-size="16"/>
+                        <comment>The status of the initialization process</comment>
+                        <min-value>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                        </min-value>
+                        <max-value>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>InputRuntimeStatus</name>
+                        <type base-type="sint16" is-array="true" array-size="16"/>
+                        <comment>The current status of the input</comment>
+                        <min-value>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                        </min-value>
+                        <max-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>SuperVisorInitStatus</name>
+                        <type base-type="sint16" is-array="false"/>
+                        <comment>The status of the initialization process</comment>
+                        <min-value value="-13"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputInitStatus</name>
+                        <type base-type="sint16" is-array="true" array-size="15"/>
+                        <comment>The status of the initialization process</comment>
+                        <min-value>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                        </min-value>
+                        <max-value>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                            <element value="1"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0">
+                        <name>OutputRuntimeStatus</name>
+                        <type base-type="sint16" is-array="true" array-size="15"/>
+                        <comment>The current status of the output</comment>
+                        <min-value>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                            <element value="-13"/>
+                        </min-value>
+                        <max-value>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                            <element value="0"/>
+                        </max-value>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+        </lists>
+        <export-settings/>
+    </data-pool>
+</opensyde-dp-core-definition>

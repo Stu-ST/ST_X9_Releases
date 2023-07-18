@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-device-definition>
+    <file-version>0x0001</file-version>
+    <device-name>3rd Party</device-name>
+    <device-description>This is a generic can node without any openSYDE support.</device-description>
+    <image>NoImage</image>
+    <bus-systems-available can="4" ethernet="0"/>
+    <can-bitrates-support>
+        <can-bitrate value="100"/>
+        <can-bitrate value="125"/>
+        <can-bitrate value="250"/>
+        <can-bitrate value="500"/>
+        <can-bitrate value="800"/>
+        <can-bitrate value="1000"/>
+    </can-bitrates-support>
+    <protocols-diagnostics>
+        <kefex support="0"/>
+        <opensyde support="0" can="0" ethernet="0"/>
+    </protocols-diagnostics>
+    <protocols-flashloader>
+        <stw-flashloader support="0" can="0"/>
+        <opensyde support="0" can="0" ethernet="0"/>
+    </protocols-flashloader>
+    <memory>
+        <user-eeprom sizebytes="0"/>
+    </memory>
+</opensyde-device-definition>

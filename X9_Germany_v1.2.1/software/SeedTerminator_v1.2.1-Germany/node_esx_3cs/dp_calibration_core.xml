@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-dp-core-definition>
+    <file-version>1</file-version>
+    <data-pool related-application-index="0" is-safety="false" scope-is-private="true" nvm-start-address="0" nvm-size="100">
+        <type>nvm</type>
+        <name>Calibration</name>
+        <version major="0" minor="0" release="0"/>
+        <comment>Information that is persistently stored in the ECU</comment>
+        <lists length="1">
+            <list nvm-crc-active="true" nvm-crc="61449" nvm-start-address="0" nvm-size="42">
+                <name>Operation</name>
+                <comment>X9 Terminator Stored Values for Calibration and Logging</comment>
+                <data-elements length="17">
+                    <data-element factor="1" offset="0" nvm-start-address="2">
+                        <name>ExtendLimit</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Extend Limit
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="4">
+                        <name>RetractLimit</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Retract Limit
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>mm</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="6">
+                        <name>RuntimeHrs</name>
+                        <type base-type="uint64" is-array="false"/>
+                        <comment>Total operation hours of the machine</comment>
+                        <min-value value="0"/>
+                        <max-value value="18446744073709551615"/>
+                        <unit>hr</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="14">
+                        <name>RuntimeSeconds</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Total machine runtime in seconds</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="16">
+                        <name>RemainingHrsToService</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Hours remaining until next service is due</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>hr</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="18">
+                        <name>SpeedLeftCalibrationValue</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Calibrated full speed RPM of left mill</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>RPM</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="22">
+                        <name>SpeedRightCalibrationValue</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Calibrated full speed RPM of right mill</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>RPM</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="26">
+                        <name>BuzzerVolume</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Volume of the buzzer as a percentage	</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>%</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="27">
+                        <name>LowSpeedWarningSetpoint</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Setpoint to trigger low speed warning</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>%</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="28">
+                        <name>LowSpeedAlarmSetpoint</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Setpoint to trigger low speed alarm</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>%</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="29">
+                        <name>HighVibrationAlarmSetpoint</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Setpoint to trigger high vibration alarm</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>mm/s</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="30">
+                        <name>HighGboxWarningSetpoint</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Setpoint to trigger high gearbox temp warning</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>degC</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="31">
+                        <name>HighGboxAlarmSetpoint</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Setpoint to trigger high geabox temp alarm</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>degC</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="32">
+                        <name>SmartAlarmOn</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Flag for whether smart alarm is on (1 for ON, 0 for OFF)</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="33">
+                        <name>SpeedEngineCalibrationValue</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Calibrated full speed RPM of header engine</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>RPM</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="37">
+                        <name>BeltSlipSetpoint</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Percentage of allowable belt slip</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit>%</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" nvm-start-address="38">
+                        <name>EngineSpeedSetpoint</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Setpoint to trigger low engine speed alarm</comment>
+                        <min-value value="0"/>
+                        <max-value value="65535"/>
+                        <unit>RPM</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+        </lists>
+        <export-settings/>
+    </data-pool>
+</opensyde-dp-core-definition>

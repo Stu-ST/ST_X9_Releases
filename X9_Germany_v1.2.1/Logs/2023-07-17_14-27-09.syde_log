@@ -1,0 +1,6 @@
+2023-07-17 14:27:09.716  INFO     SYDEsup Version             C_SYDEsup::h_WriteLog                                 SYDEsup Version: V1.08r1, MD5-Checksum: 03F5367179BCF889FB3B703FCF804201
+2023-07-17 14:27:09.716  INFO     SYDEsup Version             C_SYDEsup::h_WriteLog                                    Binary: C:\Users\stuart_seedterminato\Documents\st2_control\update\SYDEsup\SYDEsup.exe
+2023-07-17 14:27:09.716  INFO     SYDEsup Version             C_SYDEsup::h_WriteLog                                    Build date: Mar  3 2022 14:44:12
+2023-07-17 14:27:09.716  ERROR    Unpacking Update Package    C_OSCSuServiceUpdatePackage::h_UnpackPackage          Zip archive "software\SeedTerminator_v1.3-Germany.syde_sup" does not exist.
+2023-07-17 14:27:09.716  ERROR    Unzip Package               C_SYDEsup::h_WriteLog                                 Could not find Service Update Package.
+2023-07-17 14:27:09.717  ERROR    System Update               C_SYDEsup::h_WriteLog                                 Could not update system! Tool result code: 25

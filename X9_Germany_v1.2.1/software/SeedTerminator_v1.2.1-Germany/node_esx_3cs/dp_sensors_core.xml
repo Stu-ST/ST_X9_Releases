@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-dp-core-definition>
+    <file-version>1</file-version>
+    <data-pool related-application-index="0" is-safety="false" scope-is-private="true">
+        <type>diag</type>
+        <name>Sensors</name>
+        <version major="0" minor="0" release="0"/>
+        <comment/>
+        <lists length="2">
+            <list>
+                <name>Speed</name>
+                <comment/>
+                <data-elements length="9">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>AverageFrequency</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Average frequency of speed sensor pulses</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>mHz</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SpeedLeft</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Left mill speed RPM</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>RPM</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>SpeedRight</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Right mill speed RPM</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>RPM</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Vibration</name>
+                        <type base-type="sint32" is-array="false"/>
+                        <comment>Vibration Readings	</comment>
+                        <min-value value="-2147483648"/>
+                        <max-value value="2147483647"/>
+                        <unit>mm/s</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>TempGearbox</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Gearbox temperature
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>C</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>EngineSpeed</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Engine speed RPM
+ of the header</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit>RPM</unit>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Message1</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Variable description</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Message2</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Variable description</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Message3</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Variable description</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>CANMessage</name>
+                <comment/>
+                <data-elements length="11">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Xtd</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>0: 11bit-ID, 1: 29bit-ID</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Id</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Identifier</comment>
+                        <min-value value="0"/>
+                        <max-value value="4294967295"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Dlc</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Data length code</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte0</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte0 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte1</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte1 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte2</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte2 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte3</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte3 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte4</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte4 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte5</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte5 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte6</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte6 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>DataByte7</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Byte7 from databuffer</comment>
+                        <min-value value="0"/>
+                        <max-value value="255"/>
+                        <unit/>
+                        <access>read-only</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+        </lists>
+        <export-settings/>
+    </data-pool>
+</opensyde-dp-core-definition>

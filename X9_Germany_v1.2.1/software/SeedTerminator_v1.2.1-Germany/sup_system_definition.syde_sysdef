@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-system-definition>
+    <file-version>3</file-version>
+    <node-groups length="0"/>
+    <nodes length="3">
+        <node>node_esx_3cs/node_core.xml</node>
+        <node>node_left_actuator/node_core.xml</node>
+        <node>node_right_actuator/node_core.xml</node>
+    </nodes>
+    <buses length="3">
+        <bus>
+            <name>CAN2</name>
+            <comment/>
+            <type>can</type>
+            <bitrate number="500000"/>
+            <bus-id number="2"/>
+            <rx-delta-time number="0"/>
+        </bus>
+        <bus>
+            <name>Ethernet</name>
+            <comment/>
+            <type>ethernet</type>
+            <bitrate number="1000000"/>
+            <bus-id number="3"/>
+            <rx-delta-time number="0"/>
+        </bus>
+        <bus>
+            <name>CAN1</name>
+            <comment/>
+            <type>can</type>
+            <bitrate number="250000"/>
+            <bus-id number="1"/>
+            <rx-delta-time number="0"/>
+        </bus>
+    </buses>
+</opensyde-system-definition>

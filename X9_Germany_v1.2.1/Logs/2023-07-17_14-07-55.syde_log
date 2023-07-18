@@ -1,0 +1,56 @@
+2023-07-17 14:07:55.877  INFO     SYDEsup Version             C_SYDEsup::h_WriteLog                                 SYDEsup Version: V1.08r1, MD5-Checksum: 03F5367179BCF889FB3B703FCF804201
+2023-07-17 14:07:55.877  INFO     SYDEsup Version             C_SYDEsup::h_WriteLog                                    Binary: C:\Users\stuart_seedterminato\Documents\st2_control\update\SYDEsup\SYDEsup.exe
+2023-07-17 14:07:55.879  INFO     SYDEsup Version             C_SYDEsup::h_WriteLog                                    Build date: Mar  3 2022 14:44:12
+2023-07-17 14:07:55.925  INFO     Loading device definition   C_OSCDeviceDefinitionFiler::h_Load                    Value of "file-version": 1
+2023-07-17 14:07:55.925  INFO     Loading device definition   C_OSCDeviceDefinitionFilerV1::h_Load                  Default values for flashloader reset wait times for XML file "software\SeedTerminator_v1.3-Germany\3rd_party.syde_devdef" were used.
+2023-07-17 14:07:55.927  INFO     Loading device definition   C_OSCDeviceDefinitionFiler::h_Load                    Value of "file-version": 1
+2023-07-17 14:07:55.927  INFO     Loading device definition   C_OSCDeviceDefinitionFilerV1::h_Load                  Default values for flashloader reset wait times for XML file "software\SeedTerminator_v1.3-Germany\esx-3cs.syde_devdef" were used.
+2023-07-17 14:07:55.927  INFO     Loading System Definition   C_OSCSystemDefinitionFiler::h_LoadSystemDefinition    Value of "file-version": 3
+2023-07-17 14:07:55.927  INFO     Loading node definition     C_OSCNodeFiler::h_LoadNodeFile                        Value of "file-version": 1
+2023-07-17 14:07:55.928  INFO     Unzip Package               C_SYDEsup::h_WriteLog                                 Service Update Package unzipped to "software\SeedTerminator_v1.3-Germany".
+2023-07-17 14:07:55.928  INFO     Open Ethernet               C_SYDEsup::h_WriteLog                                 Ethernet driver initialized.
+2023-07-17 14:07:55.938  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_GetAllInstalledInterfaceIps  Local IP interface used with IP: 192.168.1.71, name of adapter: "WiFi"
+2023-07-17 14:07:55.940  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConfigureUdpSocket        UDP socket OK
+2023-07-17 14:07:55.940  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConfigureUdpSocket        UDP set broadcast permission OK
+2023-07-17 14:07:55.940  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConfigureUdpSocket        UDP bind() OK
+2023-07-17 14:07:55.940  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConfigureUdpSocket        UDP socket OK
+2023-07-17 14:07:55.940  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConfigureUdpSocket        UDP bind() OK
+2023-07-17 14:07:55.940  INFO     Setup Sequence              C_SYDEsup::h_WriteLog                                 Sequence initialized.
+2023-07-17 14:07:55.941  INFO     Report Progress             C_SYDEsup::h_WriteLog                                 Activate Flashloader - Request programming start:   Sending openSYDE Flashloader activation requests ...
+2023-07-17 14:07:55.942  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP socket OK IP-Address: 172.20.230.120
+2023-07-17 14:07:57.943  WARNING  openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP connect select() failed. IP-Address: 172.20.230.120 No connection within timeout
+2023-07-17 14:07:57.945  ERROR    openSYDE IP-TP              C_OSCIpDispatcherWinSock::SendTcp                     SendTcp: Could not send TCP service. Data lost. Error: 10057 IP-Address: 172.20.230.120
+2023-07-17 14:07:57.945  ERROR    openSYDE IP-TP              C_OSCProtocolDriverOsyTpIp::Cycle                     openSYDE IP-TP node 3.1: Could not send TCP request. Service data lost.
+2023-07-17 14:07:57.945  ERROR    Synchronous communication   C_OSCProtocolDriverOsy::m_PollForSpecificServiceResponse  openSYDE protocol driver node 3.1: No response received (communication error).
+2023-07-17 14:07:57.945  ERROR    openSYDE protocol driver    C_OSCProtocolDriverOsy::m_LogServiceError             openSYDE protocol driver node 3.1: Service DiagnosticSessionControl failed. Error: No response received because of communication error
+2023-07-17 14:07:57.945  ERROR    openSYDE IP-TP              C_OSCIpDispatcherWinSock::SendTcp                     SendTcp: Could not send TCP service. Data lost. Error: 10057 IP-Address: 172.20.230.120
+2023-07-17 14:07:57.946  ERROR    openSYDE IP-TP              C_OSCProtocolDriverOsyTpIp::Cycle                     openSYDE IP-TP node 3.1: Could not send TCP request. Service data lost.
+2023-07-17 14:07:57.946  ERROR    Synchronous communication   C_OSCProtocolDriverOsy::m_PollForSpecificServiceResponse  openSYDE protocol driver node 3.1: No response received (communication error).
+2023-07-17 14:07:57.946  ERROR    openSYDE protocol driver    C_OSCProtocolDriverOsy::m_LogServiceError             openSYDE protocol driver node 3.1: Service RoutineControl::RequestProgramming failed. Error: No response received because of communication error
+2023-07-17 14:07:57.946  INFO     Report Progress             C_SYDEsup::h_WriteLog                                 Activate Flashloader - Request programming warning:   Bus Id: 3 Node Id: 1 Device does not respond to RequestProgramming request.
+2023-07-17 14:07:57.948  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP socket OK IP-Address: 172.20.230.120
+2023-07-17 14:07:59.948  WARNING  openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP connect select() failed. IP-Address: 172.20.230.120 No connection within timeout
+2023-07-17 14:07:59.949  ERROR    openSYDE IP-TP              C_OSCIpDispatcherWinSock::SendTcp                     SendTcp: Could not send TCP service. Data lost. Error: 10057 IP-Address: 172.20.230.120
+2023-07-17 14:07:59.949  ERROR    openSYDE IP-TP              C_OSCProtocolDriverOsyTpIp::Cycle                     openSYDE IP-TP node 3.1: Could not send TCP request. Service data lost.
+2023-07-17 14:07:59.949  ERROR    openSYDE protocol driver    C_OSCProtocolDriverOsy::m_LogServiceError             openSYDE protocol driver node 3.1: Service EcuReset(Type:96 List:0) failed. Error: No response received because of communication error
+2023-07-17 14:07:59.949  INFO     Report Progress             C_SYDEsup::h_WriteLog                                 Activate Flashloader - ECU reset warning:   Bus Id: 3 Node Id: 1 EcuReset request for device failed.
+2023-07-17 14:08:05.451  INFO     Report Progress             C_SYDEsup::h_WriteLog                                 Activate Flashloader - Ping devices start:   Checking node states ...
+2023-07-17 14:08:05.451  INFO     Report Progress             C_SYDEsup::h_WriteLog                                 Activate Flashloader - Ping devices start:   Bus Id: 3 Node Id: 1 Checking node state ...
+2023-07-17 14:08:05.452  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP socket OK IP-Address: 172.20.230.120
+2023-07-17 14:08:07.452  WARNING  openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP connect select() failed. IP-Address: 172.20.230.120 No connection within timeout
+2023-07-17 14:08:07.452  ERROR    openSYDE IP-TP              C_OSCIpDispatcherWinSock::SendTcp                     SendTcp: Could not send TCP service. Data lost. Error: 10057 IP-Address: 172.20.230.120
+2023-07-17 14:08:07.452  ERROR    openSYDE IP-TP              C_OSCProtocolDriverOsyTpIp::Cycle                     openSYDE IP-TP node 3.1: Could not send TCP request. Service data lost.
+2023-07-17 14:08:07.453  ERROR    Synchronous communication   C_OSCProtocolDriverOsy::m_PollForSpecificServiceResponse  openSYDE protocol driver node 3.1: No response received (communication error).
+2023-07-17 14:08:07.453  ERROR    openSYDE protocol driver    C_OSCProtocolDriverOsy::m_LogServiceError             openSYDE protocol driver node 3.1: Service DiagnosticSessionControl failed. Error: No response received because of communication error
+2023-07-17 14:08:07.453  ERROR    Report Progress             C_SYDEsup::h_WriteLog                                 Activate Flashloader - Set session error:  Result: -9 Bus Id: 3 Node Id: 1 Request to set active session failed. Details:No response received because of communication error
+2023-07-17 14:08:07.455  ERROR    Activate Flashloader        C_SYDEsup::h_WriteLog                                 Activation for at least one device failed.
+2023-07-17 14:08:07.456  ERROR    System Update               C_SYDEsup::h_WriteLog                                 Could not update system! Tool result code: 51
+2023-07-17 14:08:07.458  INFO     Report Progress             C_SYDEsup::h_WriteLog                                 Reset System - Start:   Resetting System ...
+2023-07-17 14:08:07.459  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP socket OK IP-Address: 172.20.230.120
+2023-07-17 14:08:09.461  WARNING  openSYDE IP-TP              C_OSCIpDispatcherWinSock::m_ConnectTcp                TCP connect select() failed. IP-Address: 172.20.230.120 No connection within timeout
+2023-07-17 14:08:09.461  ERROR    openSYDE IP-TP              C_OSCIpDispatcherWinSock::SendTcp                     SendTcp: Could not send TCP service. Data lost. Error: 10057 IP-Address: 172.20.230.120
+2023-07-17 14:08:09.461  ERROR    openSYDE IP-TP              C_OSCProtocolDriverOsyTpIp::Cycle                     openSYDE IP-TP node 3.1: Could not send TCP request. Service data lost.
+2023-07-17 14:08:09.461  ERROR    openSYDE protocol driver    C_OSCProtocolDriverOsy::m_LogServiceError             openSYDE protocol driver node 3.1: Service EcuReset(Type:2 List:5406282) failed. Error: No response received because of communication error
+2023-07-17 14:08:09.462  ERROR    Report Progress             C_SYDEsup::h_WriteLog                                 Reset System - Node error:  Result: -9 Bus Id: 3 Node Id: 1 Could not reset routed node.
+2023-07-17 14:08:09.463  ERROR    Reset System                C_SYDEsup::h_WriteLog                                 Could not reset system.
+2023-07-17 14:08:09.465  INFO     openSYDE IP-TP              C_OSCIpDispatcherWinSock::CloseTcp                    TCP closesocket() OK. IP-Address: 172.20.230.120 on client port: 65224

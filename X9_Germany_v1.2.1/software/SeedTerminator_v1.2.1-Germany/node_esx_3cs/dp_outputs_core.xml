@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-dp-core-definition>
+    <file-version>1</file-version>
+    <data-pool related-application-index="0" is-safety="false" scope-is-private="true">
+        <type>diag</type>
+        <name>Outputs</name>
+        <version major="0" minor="0" release="0"/>
+        <comment>Different Outputs that can be controlled with openSYDE</comment>
+        <lists length="2">
+            <list>
+                <name>Digital</name>
+                <comment/>
+                <data-elements length="8">
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>OD2A1</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Digital Output</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Left_Actuator_Power_Switch</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Left Actuator Power Switch</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Actuator_Set_Position</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Position of actuator set by slider
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="100"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Right_Actuator_Power_Switch</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Right Actuator Power Switch
+
+</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Extend_Left</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Extend the Left Actuator	</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Retract_Left</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Retract the Left Actuator	</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Extend_Right</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Extend the Right Actuator</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="1" offset="0" diag-event-call="false">
+                        <name>Retract_Right</name>
+                        <type base-type="uint8" is-array="false"/>
+                        <comment>Retract the Right Acutator</comment>
+                        <min-value value="0"/>
+                        <max-value value="1"/>
+                        <unit/>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+            <list>
+                <name>Analog</name>
+                <comment/>
+                <data-elements length="3">
+                    <data-element factor="0.001" offset="0" diag-event-call="false">
+                        <name>OP2A1</name>
+                        <type base-type="uint32" is-array="false"/>
+                        <comment>Current Control Output</comment>
+                        <min-value value="0"/>
+                        <max-value value="100000"/>
+                        <unit>mA</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.001" offset="0" diag-event-call="false">
+                        <name>OAV10V</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Voltage Signal Output</comment>
+                        <min-value value="0"/>
+                        <max-value value="10000"/>
+                        <unit>V</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                    <data-element factor="0.001" offset="0" diag-event-call="false">
+                        <name>Uext_5_12V</name>
+                        <type base-type="uint16" is-array="false"/>
+                        <comment>Sensor Supply Voltage Output</comment>
+                        <min-value value="0"/>
+                        <max-value value="12000"/>
+                        <unit>V</unit>
+                        <access>read-write</access>
+                        <data-set-values/>
+                    </data-element>
+                </data-elements>
+                <data-sets/>
+            </list>
+        </lists>
+        <export-settings/>
+    </data-pool>
+</opensyde-dp-core-definition>

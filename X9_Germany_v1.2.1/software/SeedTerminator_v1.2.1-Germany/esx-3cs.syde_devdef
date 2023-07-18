@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-device-definition>
+    <!-- SVN file version:       v1_03r0 -->
+    <!-- file structure version: v0_00r1 -->
+    <file-version>0x0001</file-version>
+    <device-name>ESX-3CS</device-name>
+    <device-description>The ESX-3CS matches most of the requirements of applications for controlling mobile working machines. In total 31 analog and digital in- and outputs for sensors and actuators can be used for ambitious solutions of controlling tasks.</device-description>
+    <programming-properties is-programmable="1"/>
+    <image>esx-3cs.png</image>
+    <bus-systems-available can="2" ethernet="1"/>
+    <can-bitrates-support>
+        <can-bitrate value="100"/>
+        <can-bitrate value="125"/>
+        <can-bitrate value="250"/>
+        <can-bitrate value="500"/>
+        <can-bitrate value="800"/>
+        <can-bitrate value="1000"/>
+    </can-bitrates-support>
+    <protocols-diagnostics>
+        <kefex support="0"/>
+        <opensyde support="1" can="1" ethernet="1"/>
+    </protocols-diagnostics>
+    <protocols-flashloader>
+        <stw-flashloader support="0" can="0"/>
+        <opensyde support="1" can="1" ethernet="1" requestdownloadtimeout="40000" transferdatatimeout="5000"/>
+    </protocols-flashloader>
+    <memory>
+        <user-eeprom sizebytes="24576"/>
+    </memory>
+</opensyde-device-definition>
+

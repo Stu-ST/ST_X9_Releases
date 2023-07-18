@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opensyde-HALC-description>
+   <!-- version of this file -->
+   <file-version>0x0001</file-version>
+   <!-- version of the file content-->
+   <content-version>0x0003</content-version>
+   <!-- name of device this description is good for, e.g "ESX-4CS-GW" -->
+   <device-name>ESX-3CS</device-name>
+   <!-- Safety mode, decides resulting datapool structure, valid values are:
+        "two-levels-with-dropping" -> safe + non-safe Datapool + Config; channels of other safetyness get dropped
+        "two-levels-without-dropping" -> safe + non-safe Datapool + Config; channels of other safetyness do not get dropped; each channel gets an implicit safetyness parameters
+        "one-level-all-safe" -> safe Datapool + config (no dropping)
+        "one-level-all-non-safe" -> non-safe Datapool + config (no dropping) -->
+   <safety-mode>one-level-all-non-safe</safety-mode>
+   <!-- number of datapool copies to generate, valid values are [1;4] 
+        Mainly useful for creating redundant copies of the configuration if "nvm-config" is active -->
+   <number-of-configuration-copies>1</number-of-configuration-copies>
+   <!-- all settings related to NVM config, only applied if active is set to "true" 
+        If it is set to "true" then the HALC configuration will be placed in NVM-based Datapools. -->
+   <nvm-config active="false"/>
+   <!-- one domain block per functional group -->
+   <domain id="dom-inp">
+      <name>Inputs</name>
+      <!-- name of one of the items (for code generation) -->
+      <singular-name>Input</singular-name>
+      <category>input</category>
+      <channels count="16">
+         <channel name="X_IN_01_IDA35V"/>
+         <channel name="X_IN_02_IDA35V"/>
+         <channel name="X_IN_03_IDA35V"/>
+         <channel name="X_IN_04_IDA35V"/>
+         <channel name="X_IN_05_IACV"/>
+         <channel name="X_IN_06_IACV"/>
+         <channel name="X_IN_07_IACV"/>
+         <channel name="X_IN_08_IACV"/>
+         <channel name="X_IN_09_IDA5V"/>
+         <channel name="X_IN_10_IDA5V"/>
+         <channel name="X_IN_11_IDA5V"/>
+         <channel name="X_IN_12_IDA5V"/>
+         <channel name="X_IN_13_IDA5V"/>
+         <channel name="X_IN_14_IDA5V"/>
+         <channel name="X_IN_15_IDA5V"/>
+         <channel name="X_IN_16_IDA5V"/>
+      </channels>
+      <!-- each following section can be applied to any channel -->
+      <channel-use-cases type="uint8">
+         <!-- main selector defining basic functionality of channel -->
+         <!-- id: unique ID (within this file) of this element; must stay constant when we have new versions -->
+         <!-- value: constant used to set use-case in generated code -->
+         <!-- availability: is this use case supported for all of the channels or just some ? -->
+         <channel-use-case id="dom-inp-not-used" display="NotUsed" value="0" availability="all" is-default-for="all">
+            <comment>keep this channel disabled</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-inp-dig" display="Digital" value="1" availability="0-15">
+            <comment>read the digital state of an input signal</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-inp-cur" display="Current" value="2" availability="4-7">
+            <comment>read the current of an input signal</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-inp-freq" display="Frequency" value="3" availability="0-3,8-15">
+            <comment>read the frequency and duty cycle of a periodic input signal</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-inp-freq-avg" display="AverageFrequency" value="4" availability="0,2,8,9,11,12,13,15">
+            <comment>read the average frequency of a periodic input signal</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-inp-inc" display="Incremental" value="5" availability="{0,1},{2,3}">
+            <comment>read the position and rotational direction of an incremental position encoder</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-inp-voltage" display="Voltage" value="6" availability="0-15">
+            <comment>read the voltage of an input signal</comment>
+         </channel-use-case>
+      </channel-use-cases>
+      <!-- full list of parameters available for this domain -->
+      <channel-parameters>
+         <!-- id: unique ID (within this file) of this element; must stay constant when we have new versions -->
+         <!-- type: parameter value type (struct, uint8, ...) -->
+         <!-- availability: is this use case supported for all use-cases or just some ? -->
+         <parameter id="dom-inp-par-init" display="Initialization" type="struct"   availability="all">
+            <comment>Initializes an input</comment>
+            <!-- struct elements -->
+            <parameter-element id="dom-inp-par-init-filter" display="Filter" type ="uint16" initial-value="0" min-value="0" max-value="0xFFFF" availability="dom-inp-cur, dom-inp-voltage">
+               <comment>Cutoff frequency of 1st order digital low-pass filter in n x 0.5ms</comment>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-init-debounce" display="Debounce" type ="uint16" initial-value="0" min-value="0" max-value="0xFFFF" availability="dom-inp-dig, dom-inp-freq, dom-inp-freq-avg, dom-inp-inc">
+               <comment>Debounce time for digital inputs in microseconds</comment>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-init-polarity" display="Polarity" type ="enum" base-type="uint8" initial-value="ActiveHigh" availability="dom-inp-dig, dom-inp-freq, dom-inp-freq-avg, dom-inp-inc, dom-inp-voltage">
+               <comment>Input polarity for digital signals.</comment>
+               <enum-item display="ActiveHigh" value="0"/>
+               <enum-item display="ActiveLow" value="1"/>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-init-pull" display="Pull" type ="bitmask" base-type="uint8" initial-value="0" min-value="0" availability="dom-inp-dig, dom-inp-freq, dom-inp-freq-avg, dom-inp-inc, dom-inp-voltage">
+               <comment>Input pull resistors.</comment>
+               <bitmask-selection display="PullUp" initial-apply-value-setting="false" value="0x02">
+                  <comment>Enables the Pull-Up Resistor</comment>
+               </bitmask-selection>
+               <bitmask-selection display="PullDown" initial-apply-value-setting="false" value="0x04">
+                  <comment>Enables the Pull-Down Resistor</comment>
+               </bitmask-selection>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-init-isNamur" display="isNamur" type="enum" base-type="uint8" initial-value="False" availability="dom-inp-dig, dom-inp-freq, dom-inp-inc">
+               <comment>Is the input signal NAMUR compliant?</comment>
+               <enum-item display="False" value="0"/>
+               <enum-item display="True" value="128"/>
+            </parameter-element>
+         </parameter>
+         <parameter id="dom-inp-par-freq-avg" display="AverageFrequency" type="struct" availability="dom-inp-freq-avg">
+            <comment></comment>
+			<!-- struct elements -->
+            <parameter-element id="dom-inp-par-freq-avg-samples" display="Samples" type="uint16" initial-value="1" min-value="1" max-value="56">
+               <comment>Number of samples for average calculation.</comment>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-freq-avg-mode" display="Mode" type="bitmask" base-type="uint16" initial-value="0">
+               <comment>Defines the mode of average frequency measurement.</comment>
+               <bitmask-selection display="ExcludeMin" initial-apply-value-setting="false" value="0x0001">
+                  <comment>This mode does not include the minimum value from the average buffer.</comment>
+               </bitmask-selection>
+               <bitmask-selection display="ExcludeMax" initial-apply-value-setting="false" value="0x0002">
+                  <comment>This mode does not include the maximum value from the average buffer.</comment>
+               </bitmask-selection>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-freq-avg-filter" display="FilterConfig" type="uint16" initial-value="0" min-value="0" max-value="0xFFFF">
+               <comment>Sets the hardware glitch filter time in micro seconds. 0 deactivates the signal filter.</comment>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-freq-avg-threshold" display="VirtualPeriodThreshold" type="uint16" initial-value="0" min-value="0" max-value="0xFFFF">
+               <comment>Virtual period threshold in per mil</comment>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-freq-avg-min" display="MinFrequency" type="uint32" initial-value="2500" min-value="2500" max-value="20000000">
+               <comment>Input minimum frequency measurement limit scaled in milli Hertz.</comment>
+            </parameter-element>
+            <parameter-element id="dom-inp-par-freq-avg-max" display="MaxFrequency" type="uint32" initial-value="20000000" min-value="2500" max-value="20000000">
+               <comment>Input maximum frequency measurement limit scaled in milli Hertz.</comment>
+            </parameter-element>
+         </parameter>
+      </channel-parameters>
+      <!-- list of input and output live values for this domain -->
+      <channel-values>
+         <input-values>
+            <value display="s32_Value" type="sint32" initial-value="0" availability="dom-inp-voltage, dom-inp-cur, dom-inp-inc, dom-inp-freq, dom-inp-freq-avg, dom-inp-dig">
+               <comment>Digital state of the input channel
+Voltage value in mV
+Current in uA
+Incremental counter value
+Frequency in mHz
+               </comment>
+            </value>
+            <value display="u32_AdditionalValue" type="uint32" initial-value="FALSE" availability="dom-inp-inc, dom-inp-freq">
+               <comment>Incremental counter direction
+Receives the last duty cycle measurement in 0.01% (0.1‰).
+               </comment>
+            </value>
+         </input-values>
+         <output-values>
+         </output-values>
+         <status-values>
+            <value display="InitStatus" type="enum" base-type="sint16" initial-value="NotExecuted" availability="all">
+               <comment>The status of the initialization process</comment>
+               <enum-item display="NotExecuted" value="0"/>
+               <enum-item display="AllFine" value="1"/>
+               <enum-item display="C_UNKNOWN_ERR" value="-1"/>
+               <enum-item display="C_WARN" value="-2"/>
+               <enum-item display="C_DEFAULT" value="-3"/>
+               <enum-item display="C_BUSY" value="-4"/>
+               <enum-item display="C_RANGE" value="-5"/>
+               <enum-item display="C_OVERFLOW" value="-6"/>
+               <enum-item display="C_RD_WR" value="-7"/>
+               <enum-item display="C_NOACT" value="-8"/>
+               <enum-item display="C_COM" value="-9"/>
+               <enum-item display="C_CONFIG" value="-10"/>
+               <enum-item display="C_CHECKSUM" value="-11"/>
+               <enum-item display="C_TIMEOUT" value="-12"/>
+               <enum-item display="C_IN_PROGRESS" value="-13"/>
+            </value>
+            <value display="RuntimeStatus" type="enum" base-type="sint16" initial-value="C_NO_ERR" availability="all">
+               <comment>The current status of the input</comment>
+               <enum-item display="C_NO_ERR" value="0"/>
+               <enum-item display="C_UNKNOWN_ERR" value="-1"/>
+               <enum-item display="C_WARN" value="-2"/>
+               <enum-item display="C_DEFAULT" value="-3"/>
+               <enum-item display="C_BUSY" value="-4"/>
+               <enum-item display="C_RANGE" value="-5"/>
+               <enum-item display="C_OVERFLOW" value="-6"/>
+               <enum-item display="C_RD_WR" value="-7"/>
+               <enum-item display="C_NOACT" value="-8"/>
+               <enum-item display="C_COM" value="-9"/>
+               <enum-item display="C_CONFIG" value="-10"/>
+               <enum-item display="C_CHECKSUM" value="-11"/>
+               <enum-item display="C_TIMEOUT" value="-12"/>
+               <enum-item display="C_IN_PROGRESS" value="-13"/>
+            </value>
+         </status-values>
+      </channel-values>
+   </domain>
+   <domain id="dom-ssv">
+      <name>SuperVisor</name>
+      <category>other</category>
+      <!-- num-channels=0 -> just one block without sub-structure -->
+      <channels count="0" />
+      <domain-parameters>
+         <parameter id="dom-ssv-par-time" display="Time" type="struct" availability="all">
+            <comment>Time related settings</comment>
+            <parameter-element id="dom-ssv-par-time-min" display="TimeMin" type="uint16" initial-value="0">
+               <comment>in 0.5 ms</comment>
+            </parameter-element>
+            <parameter-element id="dom-ssv-par-time-max" display="TimeMax" type="uint16" initial-value="200">
+               <comment>in 0.5 ms</comment>
+            </parameter-element>
+         </parameter>
+         <parameter id="dom-ssv-par-ue" display="Voltage" type="struct" availability="all">
+            <comment>Voltage related settings</comment>
+            <parameter-element id="dom-ssv-par-ue-max" display="UeMax" type="uint8" initial-value="128" min-value="32" max-value="128">
+               <comment>in 0.25 V</comment>
+            </parameter-element>
+            <parameter-element id="dom-ssv-par-ue-min" display="UeMin" type="uint8" initial-value="32" min-value="32" max-value="128">
+               <comment>in 0.25 V</comment>
+            </parameter-element>
+         </parameter>
+         <parameter id="dom-ssv-par-relay" display="RelayOff" type="bitmask" base-type="uint8" initial-value="0">
+            <comment>selects on which conditions to turn off the main switch</comment>
+            <!-- value: constant used (="or"ed) in generated code -->
+            <bitmask-selection display="UeMax" initial-apply-value-setting="false" value="0x01">
+               <comment>switch off main switch if Ue is too high</comment>
+            </bitmask-selection>
+            <bitmask-selection display="UeMin" initial-apply-value-setting="false" value="0x02">
+               <comment>switch off main switch if Ue is too low</comment>
+            </bitmask-selection>
+            <bitmask-selection display="USysMax" initial-apply-value-setting="false" value="0x04">
+               <comment>switch off main switch if system voltage is too high</comment>
+            </bitmask-selection>
+            <bitmask-selection display="USysMin" initial-apply-value-setting="false" value="0x08">
+               <comment>switch off main switch if system voltage is too high</comment>
+            </bitmask-selection>
+            <bitmask-selection display="WdUser" initial-apply-value-setting="false" value="0x10">
+               <comment>switch off main switch if there is a user watchdog error</comment>
+            </bitmask-selection>
+         </parameter>
+         <parameter id="dom-ssv-par-reset" display="Reset" type="bitmask" base-type="uint8" initial-value="0">
+            <comment>selects on which conditions to reset the ECU</comment>
+            <!-- value: constant used (="or"ed) in generated code -->
+            <bitmask-selection display="UeMax" initial-apply-value-setting="false" value="0x01">
+               <comment>reset if Ue is too high</comment>
+            </bitmask-selection>
+            <bitmask-selection display="UeMin" initial-apply-value-setting="false" value="0x02">
+               <comment>reset if Ue is too low</comment>
+            </bitmask-selection>
+            <bitmask-selection display="USysMax" initial-apply-value-setting="false" value="0x04">
+               <comment>reset if system voltage is too high</comment>
+            </bitmask-selection>
+            <bitmask-selection display="USysMin" initial-apply-value-setting="false" value="0x08">
+               <comment>reset if system voltage is too high</comment>
+            </bitmask-selection>
+            <bitmask-selection display="WdUser" initial-apply-value-setting="false" value="0x10">
+               <comment>reset if there is a user watchdog error</comment>
+            </bitmask-selection>
+            <bitmask-selection display="WdSystem" initial-apply-value-setting="false" value="0x20">
+               <comment>reset if there is a system watchdog error</comment>
+            </bitmask-selection>
+            <bitmask-selection display="Config" initial-apply-value-setting="false" value="0x80">
+               <comment>reset if there is a SSV configuration error</comment>
+            </bitmask-selection>
+         </parameter>
+      </domain-parameters>
+      <domain-values>
+         <input-values>
+         </input-values>
+         <output-values>
+            <value display="OutputSsvStatus" type="struct" availability="all">
+               <comment>status information from the external system supervisor</comment>
+               <!-- struct elements -->
+               <value-element display="Version"  type="uint16" initial-value="0">
+                  <comment>the version information of the supervisor</comment>
+               </value-element>
+               <value-element display="SysError"  type="bitmask" base-type="uint16" initial-value="0">
+                  <comment>Contains current SSV error flags</comment>
+                  <!-- value: constant used (="or"ed) in generated code -->
+                  <bitmask-selection display="ErrUeMax" initial-apply-value-setting="false" value="0x01">
+                     <comment>Supply voltage too high error flag</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ErrUeMin" initial-apply-value-setting="false" value="0x02">
+                     <comment>Supply voltage too low error flag</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ErrUSysMax" initial-apply-value-setting="false" value="0x04">
+                     <comment>System overvoltage error flag</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ErrUSysMin" initial-apply-value-setting="false" value="0x08">
+                     <comment>System undervoltage error flag</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ErrWdUser" initial-apply-value-setting="false" value="0x10">
+                     <comment>Programmable user watchdog error flag</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ErrWdSys" initial-apply-value-setting="false" value="0x20">
+                     <comment>System watchdog error flag, used internally</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ErrConfig" initial-apply-value-setting="false" value="0x80">
+                     <comment>SSV configuration error flag, used internally</comment>
+                  </bitmask-selection>
+               </value-element>
+               <value-element display="LastReset"  type="bitmask" base-type="uint32" initial-value="0">
+                  <comment>Contains information about the last ECU reset.</comment>
+                  <!-- value: constant used (="or"ed) in generated code -->
+                  <bitmask-selection display="CpuResetPwOn" initial-apply-value-setting="false" value="0x00000001">
+                     <comment>Main CPU power on reset</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuResetSsv" initial-apply-value-setting="false" value="0x00000002">
+                     <comment>Main CPU reset controlled by system supervisor</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuResetSoft" initial-apply-value-setting="false" value="0x00000004">
+                     <comment>Main CPU software reset</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuResetWd" initial-apply-value-setting="false" value="0x00000008">
+                     <comment>Main CPU internal watchdog reset</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstUeMax" initial-apply-value-setting="false" value="0x00000100">
+                     <comment>Supervisor caused main CPU reset because of UEmax error</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstUeMin" initial-apply-value-setting="false" value="0x00000200">
+                     <comment>Supervisor caused main CPU reset because of UEmin error</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstUSysMax" initial-apply-value-setting="false" value="0x00000400">
+                     <comment>Supervisor caused main CPU reset because of USYSmax error</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstUSysMin" initial-apply-value-setting="false" value="0x00000800">
+                     <comment>Supervisor caused main CPU reset because of USYSmin error</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstWdUser" initial-apply-value-setting="false" value="0x00001000">
+                     <comment>Supervisor caused main CPU reset because of user watchdog error</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstWdSys" initial-apply-value-setting="false" value="0x00002000">
+                     <comment>Supervisor caused main CPU reset because of system internal watchdog error</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstHdrst" initial-apply-value-setting="false" value="0x00004000">
+                     <comment>Supervisor caused main CPU reset because of HDRST signal (TriCore watchdog or software reset)</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="CpuRstConfig" initial-apply-value-setting="false" value="0x00008000">
+                     <comment>Supervisor caused main CPU reset because of configuration error</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ResetPor" initial-apply-value-setting="false" value="0x00010000">
+                     <comment>Supervisor power on reset</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ResetExtr" initial-apply-value-setting="false" value="0x00020000">
+                     <comment>Supervisor reset controlled by main CPU (system software reset)</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ResetBor" initial-apply-value-setting="false" value="0x00040000">
+                     <comment>Supervisor brown out reset</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ResetWdr" initial-apply-value-setting="false" value="0x00080000">
+                     <comment>Supervisor internal watchdog reset</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ResetJtr" initial-apply-value-setting="false" value="0x00100000">
+                     <comment>Supervisor debugger reset</comment>
+                  </bitmask-selection>
+                  <bitmask-selection display="ResetSoft" initial-apply-value-setting="false" value="0x00800000">
+                     <comment>Supervisor software reset</comment>
+                  </bitmask-selection>
+               </value-element>
+            </value>
+         </output-values>
+         <status-values>
+            <value display="InitStatus" type="enum" base-type="sint16" initial-value="NotExecuted" availability="all">
+               <comment>The status of the initialization process</comment>
+               <enum-item display="NotExecuted" value="0"/>
+               <enum-item display="AllFine" value="1"/>
+               <enum-item display="C_UNKNOWN_ERR" value="-1"/>
+               <enum-item display="C_WARN" value="-2"/>
+               <enum-item display="C_DEFAULT" value="-3"/>
+               <enum-item display="C_BUSY" value="-4"/>
+               <enum-item display="C_RANGE" value="-5"/>
+               <enum-item display="C_OVERFLOW" value="-6"/>
+               <enum-item display="C_RD_WR" value="-7"/>
+               <enum-item display="C_NOACT" value="-8"/>
+               <enum-item display="C_COM" value="-9"/>
+               <enum-item display="C_CONFIG" value="-10"/>
+               <enum-item display="C_CHECKSUM" value="-11"/>
+               <enum-item display="C_TIMEOUT" value="-12"/>
+               <enum-item display="C_IN_PROGRESS" value="-13"/>
+            </value>
+
+         </status-values>
+      </domain-values>
+   </domain>
+   <domain id="dom-out">
+      <name>Outputs</name>
+      <!-- name of one of the items (for code generation) -->
+      <singular-name>Output</singular-name>
+      <category>output</category>
+      <channels count="15">
+         <channel name="X_OUT_01_OP2A"/>
+         <channel name="X_OUT_02_OP2A"/>
+         <channel name="X_OUT_03_OP2A"/>
+         <channel name="X_OUT_04_OP2A"/>
+         <channel name="X_OUT_05_OP2A"/>
+         <channel name="X_OUT_06_OP2A"/>
+         <channel name="X_OUT_07_OP2A"/>
+         <channel name="X_OUT_08_OP2A"/>
+         <channel name="X_OUT_09_OPL4A"/>
+         <channel name="X_OUT_10_OPL4A"/>
+         <channel name="X_OUT_11_OD2A"/>
+         <channel name="X_OUT_12_OD2A"/>
+         <channel name="X_OUT_13_OD2A"/>
+         <channel name="X_OUT_14_OD2A"/>
+         <channel name="X_OUT_15_OAV10V"/>
+      </channels>
+      <channel-use-cases type="uint8">
+         <channel-use-case id="dom-out-not-used" display="NotUsed" value="0" availability="all" is-default-for="all">
+            <comment>keep this channel disabled</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-out-dig" display="Digital" value="1" availability="0-13">
+            <comment>set the digital state of an output channel</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-out-pwm" display="PWM" value="2" availability="0-13">
+            <comment>set the PWM frequency and duty cycle of an output channel</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-out-cc-hs" display="ControlCurrentHs" value="3" availability="0-7">
+            <comment>control the power supplied by current controlled high-side PWM</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-out-cc-ls" display="ControlCurrentLs" value="4" availability="8-9">
+            <comment>control the power supplied by current controlled low-side PWM</comment>
+         </channel-use-case>
+         <channel-use-case id="dom-out-voltage" display="AnalogVoltage" value="5" availability="14">
+            <comment>generate an analog signal</comment>
+         </channel-use-case>
+      </channel-use-cases>
+      <channel-parameters>
+         <parameter id="dom-out-par-init" display="Initialization" type="struct"   availability="all">
+            <comment>Initializes an output</comment>
+            <!-- struct elements -->
+            <parameter-element id="dom-out-par-init-freq" display="Frequency" type="uint32" initial-value="100000" min-value="20000" max-value="1000000" availability="dom-out-pwm, dom-out-cc-hs, dom-out-cc-ls">
+               <comment>Frequency in mHz</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-init-max-pwm" display="MaxPWMDC" type="sint32" initial-value="10000" min-value="1" availability="dom-out-pwm">
+               <comment>Defines the 100% PWM duty cycle</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-init-max-cur-hs" display="MaxCurrentHs" type="sint32" initial-value="2500000" min-value="0" max-value="2500000" availability="dom-out-cc-hs">
+               <comment>Defines the maximum current limit in microampere</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-init-max-cur-ls" display="MaxCurrentLs" type="sint32" initial-value="4000000" min-value="0" max-value="4000000" availability="dom-out-cc-ls">
+               <comment>Defines the maximum current limit in microampere</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-init-max-voltage" display="MaxVoltage" type="sint32" initial-value="10000" min-value="0" max-value="10000" availability="dom-out-voltage">
+               <comment>Defines the maximum voltage limit in millivolts</comment>
+            </parameter-element>
+         </parameter>
+         <parameter id="dom-out-par-pid" display="PIDConfig" type="struct" availability="dom-out-cc-hs, dom-out-cc-ls">
+            <comment>Configuration for current controlled output</comment>
+            <!-- struct elements -->
+            <parameter-element id="dom-out-par-pid-filter" display="Filter" type="uint16" initial-value="10" availability="all">
+               <comment>Cutoff frequency of the 1st order digital low-pass filter of the current feedback in 0.5 milliseconds</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-pid-setpoint" display="Setpoint" type="sint32" initial-value="0" availability="all">
+               <comment>Desired setpoint in microampere for current controlled outputs</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-pid-p" display="P_Value" type="sint32" initial-value="0" availability="all">
+               <comment>Proportional gain in 0.001 KP</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-pid-i" display="I_Value" type="sint16" initial-value="0" availability="all">
+               <comment>Integral time Ti in ms</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-pid-d" display="D_Value" type="sint16" initial-value="0" availability="all">
+               <comment>Derivation time Td in ms</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-pid-sample-time" display="SampleTime" type="sint16" initial-value="1" min-value="1" max-value="32767" availability="all">
+               <comment>Current control sample time T in ms</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-pid-limit-min" display="OutputLimitMin" type="sint16" initial-value="0" min-value="0" max-value="9999" availability="all">
+               <comment>Minimum output duty cycle in 0.01%, minimum value &lt; maximum value</comment>
+            </parameter-element>
+            <parameter-element id="dom-out-par-pid-limit-max" display="OutputLimitMax" type="sint16" initial-value="10000" min-value="1" max-value="10000" availability="all">
+               <comment>Maximum output duty cycle in 0.01%, maximum value &gt; minimum value</comment>
+            </parameter-element>
+         </parameter>
+      </channel-parameters>
+      <channel-values>
+         <input-values>
+         </input-values>
+         <output-values>
+            <value display="Value" type="sint32" initial-value="0" min-value="0" availability="dom-out-dig, dom-out-pwm, dom-out-cc-hs, dom-out-cc-ls, dom-out-voltage">
+               <comment>Digital state of the output
+PWM Duty Cycle
+Current Control setpoint in uA
+Voltage in mV
+               </comment>
+            </value>
+         </output-values>
+         <status-values>
+            <value display="InitStatus" type="enum" base-type="sint16" initial-value="NotExecuted" availability="all">
+               <comment>The status of the initialization process</comment>
+               <enum-item display="NotExecuted" value="0"/>
+               <enum-item display="AllFine" value="1"/>
+               <enum-item display="C_UNKNOWN_ERR" value="-1"/>
+               <enum-item display="C_WARN" value="-2"/>
+               <enum-item display="C_DEFAULT" value="-3"/>
+               <enum-item display="C_BUSY" value="-4"/>
+               <enum-item display="C_RANGE" value="-5"/>
+               <enum-item display="C_OVERFLOW" value="-6"/>
+               <enum-item display="C_RD_WR" value="-7"/>
+               <enum-item display="C_NOACT" value="-8"/>
+               <enum-item display="C_COM" value="-9"/>
+               <enum-item display="C_CONFIG" value="-10"/>
+               <enum-item display="C_CHECKSUM" value="-11"/>
+               <enum-item display="C_TIMEOUT" value="-12"/>
+               <enum-item display="C_IN_PROGRESS" value="-13"/>
+            </value>
+            <value display="RuntimeStatus" type="enum" base-type="sint16" initial-value="C_NO_ERR" availability="all">
+               <comment>The current status of the output</comment>
+               <enum-item display="C_NO_ERR" value="0"/>
+               <enum-item display="C_UNKNOWN_ERR" value="-1"/>
+               <enum-item display="C_WARN" value="-2"/>
+               <enum-item display="C_DEFAULT" value="-3"/>
+               <enum-item display="C_BUSY" value="-4"/>
+               <enum-item display="C_RANGE" value="-5"/>
+               <enum-item display="C_OVERFLOW" value="-6"/>
+               <enum-item display="C_RD_WR" value="-7"/>
+               <enum-item display="C_NOACT" value="-8"/>
+               <enum-item display="C_COM" value="-9"/>
+               <enum-item display="C_CONFIG" value="-10"/>
+               <enum-item display="C_CHECKSUM" value="-11"/>
+               <enum-item display="C_TIMEOUT" value="-12"/>
+               <enum-item display="C_IN_PROGRESS" value="-13"/>
+            </value>
+         </status-values>
+      </channel-values>
+   </domain>
+</opensyde-HALC-description>
